@@ -1,43 +1,25 @@
-
-# MySQL.  Versions 4.1 and 5.0 are recommended.
+# SQLite version 3.x
+#   gem install sqlite3
 #
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
 #
-# Important to Drop the Heroku DB or reset db use the below command
-#
-# heroku pg:reset DATABASE_URL --confirm cvbuilder ( No Need )
-# heroku run rake db:reset 
-# heroku run rake db:migrate
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
 
 development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: cv_builder_db
-  pool: 5
-  username: root
-  password: password
-  
+  <<: *default
+  database: db/development.sqlite3
 
-fast_mode:
-  adapter: postgresql
-  encoding: utf8
-  reconnect: false
-  database: cv_builder_db
-  pool: 5
-  username: root
-  password: password
-  
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  encoding: utf8
-  reconnect: false
-  database: cv_builder_db
-  pool: 5
-  username: root
-  password: password
-##  socket: /var/run/mysqld/mysqld.sock
-  port: 5432
-  host: localhost
-  
-
+  <<: *default
+  database: db/production.sqlite3

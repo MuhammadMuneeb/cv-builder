@@ -29,8 +29,8 @@ Devise.setup do |config|
   config.omniauth :twitter ,tconf[Rails.env]["app_id"], tconf[Rails.env]["secret_key"]
 
   require "omniauth-github"
-  
-  config.omniauth :github, 'c3c55176248542521759','e5673dbb73c7e010781e8c1457d20a796ad9c19d' 
+
+  config.omniauth :github, 'c3c55176248542521759','e5673dbb73c7e010781e8c1457d20a796ad9c19d'
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
@@ -141,7 +141,7 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
-  
+
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
 
@@ -245,4 +245,8 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+
+  config.secret_key = '34f3f0db0c9917acc5ffbbe6981e848b492bdb56cfed5799c4f95b9d
+  e590be60cf7d501f3315e34b4a1b425044fdce4905f1df7b6ebc1c1994748a600d21c91d'
+
 end

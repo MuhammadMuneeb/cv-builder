@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.2.4'
 
-gem 'rails', '3.2.13'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,26 +12,26 @@ gem 'rails', '3.2.13'
 gem "pg"
 
 gem 'execjs'
-gem 'libv8', '~> 3.11.8'
-gem 'therubyracer'
-gem 'psych' , '2.0.0'
+#gem 'libv8'
+#gem 'therubyracer'
+gem 'psych'
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'coffee-rails', '~> 3.2.1'
-gem 'less-rails'
+gem 'coffee-rails'
+#gem 'less-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer'
 
-gem 'uglifier', '>= 1.0.3'
- 
+gem 'uglifier'
+
 gem 'twitter-bootstrap-rails'
 
-gem "jquery-rails", "1.0.19"
+gem "jquery-rails"
 
 gem 'rest-client'
 # gem for facebook authentication using devise
-gem 'devise','2.2.4'
+gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'oauth2'
@@ -44,18 +44,21 @@ gem 'omniauth-linkedin'
 
 gem 'github_api'
 
-gem "simple_form", '2.0.2'
+gem "simple_form"
 
 gem 'omniauth-github'
 
 gem 'bitly'
 
 
-gem 'linkedin', '0.4.3', :git => "git://github.com/pengwynn/linkedin.git"
+gem 'linkedin', :git => "git://github.com/pengwynn/linkedin.git"
 
 gem 'wicked_pdf'
 gem "wkhtmltopdf-binary"
 
-gem 'thin'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+require 'rbconfig'
+gem 'wdm' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
 
 
+#gem 'thin'
